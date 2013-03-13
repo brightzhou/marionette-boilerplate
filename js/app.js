@@ -9,7 +9,7 @@ require.config({
         text: 'libs/text',
         bootstrap: 'libs/bootstrap'
     },
-    shims: {
+    shim: {
         backbone: {
             deps: ['jquery', 'underscore']
         },
