@@ -22,6 +22,11 @@ require.config({
     }
 })
 
+requirejs.onError = function (err) {
+    console.log(err.requireType);
+    console.log(err.requireModules);
+};
+
 requirejs(['Router', 'jquery', 'underscore', 'backbone', 'hogan', 'mustache', 'bootstrap', 'text'], function (Router) {
 
     var myApp = window.myApp = {};
