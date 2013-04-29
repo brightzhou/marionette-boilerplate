@@ -1,12 +1,13 @@
-# backbone boilerplate
+# Marionette boilerplate
 
-## Just what i(you) need to start my(your) next backbone application.
+## Just what i(you) need to start my(your) next Marionette application.
 
 ### What i use :
 
 + backbone 1.0.0
++ marionette 1.0.2
 + underscore 1.4.4
-+ jquery 1.9.1
++ jQuery 2.0.0
 + requirejs 2.1.5
 + with text plugin 2.0.5+
 + mustache 0.7.2
