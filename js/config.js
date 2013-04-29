@@ -15,7 +15,8 @@ require.config({
 	},
 	shim: {
 		backbone: {
-			deps: ['jquery', 'underscore']
+			deps: ['jquery', 'underscore'],
+			exports: 'Backbone'
 		},
 		babysitter: {
 			deps: ['backbone']
@@ -24,20 +25,20 @@ require.config({
 			deps: ['backbone']
 		},
 		marionette: {
-			deps: ['babysitter', 'wreqr', 'json2']
+			deps: ['babysitter', 'wreqr', 'json2'],
+			exports: 'Marionette'
 		},
 		bootstrap: {
 			deps: ['jquery']
 		}
 	}
-})
+});
 
 requirejs.onError = function (err) {
 	console.log(err.requireType);
 	console.log(err.requireModules);
 };
 
-requirejs(['jquery', 'underscore', 'backbone', 'hogan', 'mustache', 'bootstrap', 'text'], function () {
-
-
+requirejs(['App', 'jquery', 'underscore', 'backbone', 'hogan', 'mustache', 'bootstrap', 'text'], function (MyApp) {
+	MyApp.start();
 });
