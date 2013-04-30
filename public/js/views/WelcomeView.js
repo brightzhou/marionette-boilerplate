@@ -1,6 +1,6 @@
-define(['marionette'], function(Marionette){
+define(['marionette', 'text!./welcome.mustache'], function(Marionette, myTemplate){
 	return Marionette.ItemView.extend({
-		template: '<div>Welcome to your brand new Marionette app !</div>',
+		template: myTemplate,
 		tagName: 'h1'
 	});
 });
