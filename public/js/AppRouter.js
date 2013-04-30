@@ -1,8 +1,8 @@
-define(['marionette', 'controllers/Controler'], function (Marionette, MyController) {
+define(['marionette'], function (Marionette) {
 	return Marionette.AppRouter.extend({
-		controller: new MyController(),
 		appRoutes: {
-			'': 'index'
+			'': 'index',
+			'test':'test'
 		}
 	});
 });

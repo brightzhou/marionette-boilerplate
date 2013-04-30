@@ -1,4 +1,4 @@
-define(['marionette', 'backbone'], function (Marionette, Backbone) {
+define(['marionette', 'backbone', 'AppRouter'], function (Marionette, Backbone, AppRouter) {
 	var MyApp = new Marionette.Application();
 
 	MyApp.addRegions({
@@ -6,8 +6,10 @@ define(['marionette', 'backbone'], function (Marionette, Backbone) {
 	});
 
 	MyApp.addInitializer(function (options) {
-		require(["AppRouter"], function (AppRouter) {
-			new AppRouter();
+		require(["controllers/Controller"], function (Controller) {
+			MyApp.appRouter = new AppRouter({
+            	controller:new Controller()
+			});
 		});
 
 	});
