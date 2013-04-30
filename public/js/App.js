@@ -5,13 +5,17 @@ define(['marionette', 'backbone', 'AppRouter'], function (Marionette, Backbone, 
 		mainRegion: "#body"
 	});
 
+	require(["modules/Module"], function(Module){
+		MyApp.module("myModule", Module);
+	})
+
 	MyApp.addInitializer(function (options) {
+		MyApp.module("myModule").start();
 		require(["controllers/Controller"], function (Controller) {
 			MyApp.appRouter = new AppRouter({
             	controller:new Controller()
 			});
 		});
-
 	});
 
 	MyApp.on("initialize:after", function (options) {
