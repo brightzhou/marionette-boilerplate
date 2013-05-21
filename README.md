@@ -8,9 +8,16 @@
 + marionette 1.0.2
 + underscore 1.4.4
 + jQuery 2.0.0
-+ requirejs 2.1.5
++ requirejs 2.1.6
 + with text plugin 2.0.5+
 + mustache 0.7.2
 + hogan 3.0.0
 + Twitter Boostrap 2.3.1
 + less 1.3.3
+
+### Make it works :
+
+npm install
+and then go to public folder
+and then : bower install
+and then it's ok :)
