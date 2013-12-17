@@ -32,9 +32,8 @@ requirejs.onError = function (err) {
 
 requirejs(['App', 'jquery', 'underscore', 'backbone', 'hogan', 'mustache', 'bootstrap', 'text'], function (MyApp) {
     Marionette.Renderer.render = function (template, data) {
-        var template = Hogan.compile(template);
-        return template.render(data);
-    }
+        return Hogan.compile(template).render(data);
+    };
 
     MyApp.start();
 });

@@ -8,7 +8,7 @@ define(['AppRouter'], function (AppRouter) {
 
     require(["modules/Module"], function (Module) {
         MyApp.module("myModule", Module);
-    })
+    });
 
     MyApp.addInitializer(function () {
         MyApp.module("myModule").start();
