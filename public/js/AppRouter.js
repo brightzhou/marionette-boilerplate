@@ -1,7 +1,8 @@
-define(['marionette'], function (Marionette) {
-	return Marionette.AppRouter.extend({
-		appRoutes: {
-			'': 'index'
-		}
-	});
+define(['controllers/Controller'], function (Controller) {
+    return Backbone.Marionette.AppRouter.extend({
+        controller: new Controller(),
+        appRoutes: {
+            '': 'index'
+        }
+    });
 });

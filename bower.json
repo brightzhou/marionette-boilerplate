@@ -1,0 +1,16 @@
+{
+    "name": "Marionette-Boilerplate",
+    "version": "0.0.2",
+    "dependencies": {
+        "jquery": "2.0.3",
+        "backbone": "1.1.0",
+        "marionette": "1.4.1",
+        "underscore": "1.5.2",
+        "requirejs": "2.1.9",
+        "requirejs-text": "2.0.10",
+        "mustache": "0.7.3",
+        "hogan": "3.0.0",
+        "bootstrap": "3.0.3",
+        "less": "1.5.1"
+    }
+}

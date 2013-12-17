@@ -1,8 +1,8 @@
-define(['App', 'marionette'], function (MyApp, Marionette) {
-	return Marionette.Controller.extend({
+define(['marionette'], function () {
+    return Backbone.Marionette.Controller.extend({
 
-		index: function () {
-		}
+        index: function () {
+        }
 
-	});
+    });
 });
