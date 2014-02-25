@@ -1,25 +1,21 @@
-define(['AppRouter'], function (AppRouter) {
+define(['marionette', 'AppRouter', 'views/welcome/WelcomeView'], function (Backbone, AppRouter, WelcomeView) {
 
-    var MyApp = new Marionette.Application();
+	var MyApp = new Backbone.Marionette.Application();
 
-    MyApp.addRegions({
-        mainRegion: "#body"
-    });
+	MyApp.addRegions({
+		mainRegion: "#body"
+	});
 
-    require(["modules/Module"], function (Module) {
-        MyApp.module("myModule", Module);
-    });
+	MyApp.addInitializer(function () {
+		MyApp.appRouter = new AppRouter();
+		MyApp.mainRegion.show(new WelcomeView());
+	});
 
-    MyApp.addInitializer(function () {
-        MyApp.module("myModule").start();
-        MyApp.appRouter = new AppRouter();
-    });
+	MyApp.on("initialize:after", function () {
+		if (Backbone.history) {
+			Backbone.history.start();
+		}
+	});
 
-    MyApp.on("initialize:after", function () {
-        if (Backbone.history) {
-            Backbone.history.start();
-        }
-    });
-
-    return MyApp;
+	return MyApp;
 });
