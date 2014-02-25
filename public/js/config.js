@@ -1,3 +1,4 @@
+/*jshint -W117*/
 require.config({
 	baseUrl: 'js',
 	paths: {
@@ -9,7 +10,7 @@ require.config({
 		mustache: 'libs/mustache/mustache',
 		text: 'libs/requirejs-text/text'
 	},
-	deps: ['hogan', 'mustache', 'text'],
+	deps: ['mustache', 'text'],
 	shim: {
 		backbone: {
 			deps: ['jquery', 'underscore']
@@ -21,13 +22,14 @@ require.config({
 });
 
 requirejs.onError = function (err) {
+	'use strict';
 	console.log(err);
 	console.log(err.requireType);
 	console.log(err.requireModules);
 };
 
-requirejs(['App', 'backbone'], function (MyApp, Backbone) {
-
+requirejs(['App', 'backbone', 'hogan'], function (MyApp, Backbone, Hogan) {
+	'use strict';
 	Backbone.Marionette.Renderer.render = function (template, data) {
 		return Hogan.compile(template).render(data);
 	};

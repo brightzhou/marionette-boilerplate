@@ -1,5 +1,5 @@
 define(['marionette', 'AppRouter', 'views/welcome/WelcomeView'], function (Backbone, AppRouter, WelcomeView) {
-
+	'use strict';
 	var MyApp = new Backbone.Marionette.Application();
 
 	MyApp.addRegions({
