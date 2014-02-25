@@ -3,7 +3,7 @@ define(['marionette', 'AppRouter', 'views/welcome/WelcomeView'], function (Backb
 	var MyApp = new Backbone.Marionette.Application();
 
 	MyApp.addRegions({
-		mainRegion: "#body"
+		mainRegion: '#body'
 	});
 
 	MyApp.addInitializer(function () {
@@ -11,7 +11,7 @@ define(['marionette', 'AppRouter', 'views/welcome/WelcomeView'], function (Backb
 		MyApp.mainRegion.show(new WelcomeView());
 	});
 
-	MyApp.on("initialize:after", function () {
+	MyApp.on('initialize:after', function () {
 		if (Backbone.history) {
 			Backbone.history.start();
 		}
