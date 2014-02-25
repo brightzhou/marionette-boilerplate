@@ -1,8 +1,8 @@
-define(['marionette'], function () {
-    return Backbone.Marionette.Controller.extend({
+define(['marionette'], function (Backbone) {
+	return Backbone.Marionette.Controller.extend({
 
-        index: function () {
-        }
+		index: function () {
+		}
 
-    });
+	});
 });
