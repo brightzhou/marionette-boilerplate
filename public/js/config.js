@@ -8,7 +8,6 @@ require.config({
         hogan: 'libs/hogan/web/1.0.0/hogan',
         mustache: 'libs/mustache/mustache',
         text: 'libs/requirejs-text/text',
-        bootstrap: 'libs/bootstrap/dist/js/bootstrap'
     },
     shim: {
         backbone: {
@@ -30,7 +29,7 @@ requirejs.onError = function (err) {
     console.log(err.requireModules);
 };
 
-requirejs(['App', 'jquery', 'underscore', 'backbone', 'hogan', 'mustache', 'bootstrap', 'text'], function (MyApp) {
+requirejs(['App', 'jquery', 'underscore', 'backbone', 'hogan', 'mustache', 'text'], function (MyApp) {
     Marionette.Renderer.render = function (template, data) {
         return Hogan.compile(template).render(data);
     };
