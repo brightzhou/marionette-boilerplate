@@ -3,7 +3,7 @@ define(['marionette', 'AppRouter', 'views/welcome/WelcomeView'], function (Backb
 	var MyApp = new Backbone.Marionette.Application();
 
 	MyApp.addRegions({
-		mainRegion: '#body'
+		mainRegion: 'body'
 	});
 
 	MyApp.addInitializer(function () {

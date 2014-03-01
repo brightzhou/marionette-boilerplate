@@ -1,14 +1,18 @@
 {
 	"name": "marionette-boilerplate",
 	"description": "a good start for marionette app",
-	"version": "0.0.1",
+	"version": "0.1.1",
 	"private": false,
 	"dependencies": {
-		"express": "3.x"
+		"express": "~3.4.8",
+		"winston": "~0.7.2"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.2",
+		"load-grunt-tasks": "~0.4.0",
 		"grunt-contrib-jshint": "~0.6.3",
-		"load-grunt-tasks": "~0.4.0"
+		"grunt-express-server": "~0.4.13",
+		"grunt-contrib-watch": "~0.5.3",
+		"grunt-open": "~0.2.3"
 	}
 }
