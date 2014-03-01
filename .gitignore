@@ -5,3 +5,5 @@ node_modules/
 public/js/libs/
 *.css
 Gruntfile.js
+dist/
+.sass-cache
