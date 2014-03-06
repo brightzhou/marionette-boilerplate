@@ -26,7 +26,11 @@ module.exports = (grunt) ->
 		jshint:
 			options:
 				jshintrc: '.jshintrc'
-			src: ['public/js/**/*.js', '!public/js/libs/**/*.js']
+			src: [
+				'public/js/**/*.js'
+				'!public/js/libs/**/*.js'
+				'!public/js/**/*Test.js'
+			]
 
 		sass:
 			dist:
@@ -59,6 +63,13 @@ module.exports = (grunt) ->
 				files:
 					'dist/index.html': ['public/index.html']
 
+		mocha:
+			test:
+				options:
+					reporter: 'Nyan'
+				src: ['tests/index.html']
+
 	# Tasks
 	grunt.registerTask 'default', ['jshint', 'express:dev', 'open:dev', 'watch']
+	grunt.registerTask 'test', ['jshint', 'mocha']
 	grunt.registerTask 'dist', ['jshint', 'sass:dist', 'cssmin:dist', 'requirejs', 'processhtml:dist']
