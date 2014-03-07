@@ -6,16 +6,18 @@
 </head>
 <body>
 <div id="mocha"></div>
+<script src="../public/js/libs/jquery/dist/jquery.min.js"></script>
 <script src="../public/js/libs/mocha/mocha.js"></script>
 <script src="../public/js/libs/chai/chai.js"></script>
 <script src="../public/js/libs/sinonjs/sinon.js"></script>
 <script src="../public/js/libs/sinon-chai/lib/sinon-chai.js"></script>
+<script src="../public/js/libs/chai-jquery/chai-jquery.js"></script>
 <script>
 	mocha.ui('bdd');
 	mocha.reporter('html');
 	var expect = chai.expect,
-			should = chai.should(),
-			assert = chai.assert;
+			should = chai.should();
+
 </script>
 <script data-main="js/SpecRunner.js" src="../public/js/libs/requirejs/require.js"></script>
 </body>
