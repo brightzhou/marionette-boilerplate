@@ -12,12 +12,12 @@ module.exports = (grunt) ->
 		watch:
 			express:
 				files: ['**/*.js']
-				tasks: ['express:dev']
+				tasks: ['test', 'express:dev']
 				options:
 					spawn: false
-			js:
-				files: ['public/js/**/.js', 'server/**/*.js']
-				tasks: ['jshint']
+			sass:
+				files: ['**/*.scss']
+				tasks: ['sass:dev']
 
 		open:
 			dev:
@@ -33,6 +33,9 @@ module.exports = (grunt) ->
 			]
 
 		sass:
+			dev:
+				files:
+					'public/css/base.css': 'public/css/base.scss'
 			dist:
 				files:
 					'dist/css/style.css': 'public/css/base.scss'
@@ -66,10 +69,10 @@ module.exports = (grunt) ->
 		mocha:
 			test:
 				options:
-					reporter: 'Nyan'
+					reporter: 'Spec'
 				src: ['tests/index.html']
 
 	# Tasks
-	grunt.registerTask 'default', ['jshint', 'express:dev', 'open:dev', 'watch']
 	grunt.registerTask 'test', ['jshint', 'mocha']
-	grunt.registerTask 'dist', ['jshint', 'sass:dist', 'cssmin:dist', 'requirejs', 'processhtml:dist']
+	grunt.registerTask 'default', ['test', 'sass:dev', 'express:dev', 'open:dev', 'watch']
+	grunt.registerTask 'dist', ['test', 'sass:dist', 'cssmin:dist', 'requirejs', 'processhtml:dist']

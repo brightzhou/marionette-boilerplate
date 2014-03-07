@@ -38,5 +38,5 @@ requirejs(['App', 'marionette', 'hogan'], function (MyApp, Backbone, Hogan) {
 		return Hogan.compile(template).render(data);
 	};
 
-//	MyApp.start();
+	MyApp.start();
 });
