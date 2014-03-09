@@ -9,7 +9,7 @@ require.config({
 		mustache: 'libs/mustache/mustache',
 		text: 'libs/requirejs-text/text',
 		chai: 'libs/chai/chai',
-		'jquery-chai': 'libs/sinon-chai/lib/sinon-chai'
+		'chai-jquery': 'libs/chai-jquery/chai-jquery'
 	},
 	deps: ['mustache', 'text'],
 	shim: {
@@ -22,18 +22,26 @@ require.config({
 		},
 		hogan: {
 			exports: 'Hogan'
+		},
+		chai: {
+			deps: ['jquery'],
+			exports: 'chai'
+		},
+		'chai-jquery': {
+			deps: ['chai']
 		}
 	}
 });
 
-require(['require', 'marionette', 'hogan', 'chai', 'jquery-chai'],
-	function (require, Backbone, Hogan, chai, jqueryChai) {
+require(['require', 'marionette', 'hogan', 'chai', 'chai-jquery'],
+	function (require, Backbone, Hogan, chai, chaiJquery) {
+
+		chai.should();
+		chai.use(chaiJquery);
 
 		Backbone.Marionette.Renderer.render = function (template, data) {
 			return Hogan.compile(template).render(data);
 		};
-
-		chai.use(jqueryChai);
 
 		require([
 			'views/welcome/WelcomeViewTest'

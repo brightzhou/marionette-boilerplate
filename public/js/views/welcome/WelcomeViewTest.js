@@ -14,8 +14,7 @@ define(['./WelcomeView'], function (WelcomeView) {
 
 		it('should render an h1 element', function () {
 			view.render();
-			view.$el.should.exist;
-			view.$el.should.not.to.be.empty;
+			view.$el.should.have('h1');
 		});
 	});
 });
