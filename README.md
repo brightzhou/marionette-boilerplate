@@ -5,11 +5,11 @@
 ### What i use :
 
 + backbone 1.1.2
-+ marionette 1.6.2
++ marionette 1.8.2
 + underscore 1.6.0
 + jQuery 2.1.0
 + requirejs 2.1.11
-+ with text plugin 2.0.10
++ with text plugin 2.0.12
 + mustache 0.8.1
 + hogan 3.0.0
 + sass 3.2.12

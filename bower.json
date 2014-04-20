@@ -1,24 +1,21 @@
 {
-	"name": "Marionette-Boilerplate",
-	"version": "0.0.2",
-	"dependencies": {
-		"jquery": "2.1.0",
-		"backbone": "1.1.2",
-		"marionette": "1.6.2",
-		"underscore": "1.6.0",
-		"requirejs": "2.1.11",
-		"requirejs-text": "2.0.10",
-		"mustache": "0.8.1",
-		"hogan": "3.0.0"
-	},
-	"devDependencies": {
-		"mocha": "~1.17.1",
-		"chai": "~1.9.0",
-		"sinonjs": "~1.8.2",
-		"sinon-chai": "~2.5.0",
-		"chai-jquery": "~1.2.1"
-	},
-	"resolutions": {
-		"underscore": "1.6.0"
-	}
+    "name": "Marionette-Boilerplate",
+    "version": "0.1.0",
+    "dependencies": {
+        "jquery": "2.1.0",
+        "backbone": "1.1.2",
+        "marionette": "1.8.2",
+        "underscore": "1.6.0",
+        "requirejs": "2.1.11",
+        "requirejs-text": "2.0.12",
+        "mustache": "0.8.1",
+        "hogan": "3.0.0"
+    },
+    "devDependencies": {
+        "mocha": "~1.18.2",
+        "chai": "~1.9.0",
+        "sinonjs": "~1.9.1",
+        "sinon-chai": "~2.5.0",
+        "chai-jquery": "~1.2.1"
+    }
 }
