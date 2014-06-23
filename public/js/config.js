@@ -16,8 +16,7 @@ require.config({
 			deps: ['jquery', 'underscore']
 		},
 		marionette: {
-			deps: ['backbone'],
-			exports: 'Backbone'
+			deps: ['backbone']
 		},
 		hogan: {
 			exports: 'Hogan'
@@ -32,9 +31,11 @@ requirejs.onError = function (err) {
 	console.log(err.requireModules);
 };
 
-requirejs(['App', 'marionette', 'hogan'], function (MyApp, Backbone, Hogan) {
+requirejs(['App', 'marionette', 'hogan'], function (MyApp, Marionette, Hogan) {
 	'use strict';
-	Backbone.Marionette.Renderer.render = function (template, data) {
+
+
+	Marionette.Renderer.render = function (template, data) {
 		return Hogan.compile(template).render(data);
 	};
 

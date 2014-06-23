@@ -17,8 +17,7 @@ require.config({
 			deps: ['jquery', 'underscore']
 		},
 		marionette: {
-			deps: ['backbone'],
-			exports: 'Backbone'
+			deps: ['backbone']
 		},
 		hogan: {
 			exports: 'Hogan'
@@ -34,12 +33,12 @@ require.config({
 });
 
 require(['require', 'marionette', 'hogan', 'chai', 'chai-jquery'],
-	function (require, Backbone, Hogan, chai, chaiJquery) {
+	function (require, Marionette, Hogan, chai, chaiJquery) {
 
 		chai.should();
 		chai.use(chaiJquery);
 
-		Backbone.Marionette.Renderer.render = function (template, data) {
+		Marionette.Renderer.render = function (template, data) {
 			return Hogan.compile(template).render(data);
 		};
 

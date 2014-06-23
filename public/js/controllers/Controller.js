@@ -1,6 +1,6 @@
-define(['marionette'], function (Backbone) {
+define(['marionette'], function (Marionette) {
 	'use strict';
-	return Backbone.Marionette.Controller.extend({
+	return Marionette.Controller.extend({
 
 		index: function () {
 		}

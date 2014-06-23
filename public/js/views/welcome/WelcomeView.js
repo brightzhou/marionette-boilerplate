@@ -1,6 +1,6 @@
-define(['marionette', 'text!./welcomeTmpl.mustache'], function (Backbone, myTemplate) {
+define(['marionette', 'text!./welcomeTmpl.mustache'], function (Marionette, myTemplate) {
 	'use strict';
-	return Backbone.Marionette.ItemView.extend({
+	return Marionette.ItemView.extend({
 		template: myTemplate,
 		tagName: 'p'
 	});
