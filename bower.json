@@ -17,5 +17,8 @@
     "sinonjs": "1.10.2",
     "sinon-chai": "2.5.0",
     "chai-jquery": "1.2.2"
+  },
+  "resolutions": {
+    "jquery": "2.1.1"
   }
 }
