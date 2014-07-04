@@ -75,4 +75,5 @@ module.exports = (grunt) ->
 	# Tasks
 	grunt.registerTask 'test', ['jshint', 'mocha']
 	grunt.registerTask 'default', ['test', 'sass:dev', 'express:dev', 'open:dev', 'watch']
+	grunt.registerTask 'serve', ['test', 'sass:dev', 'express:dev', 'open:dev', 'watch']
 	grunt.registerTask 'dist', ['test', 'sass:dist', 'cssmin:dist', 'requirejs', 'processhtml:dist']
