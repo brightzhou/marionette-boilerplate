@@ -5,7 +5,7 @@
 ### What i use :
 
 + backbone 1.1.2
-+ marionette 2.0.1
++ marionette 2.1.0
 + underscore 1.6.0
 + jQuery 2.1.1
 + requirejs 2.1.14
