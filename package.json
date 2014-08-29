@@ -4,17 +4,17 @@
   "version": "0.2.0",
   "private": false,
   "dependencies": {
-    "express": "4.8.3",
+    "express": "4.8.6",
     "winston": "0.7.3"
   },
   "devDependencies": {
     "grunt": "0.4.5",
     "load-grunt-tasks": "0.6.0",
     "grunt-contrib-jshint": "0.10.0",
-    "grunt-express-server": "0.4.17",
+    "grunt-express-server": "0.4.19",
     "grunt-contrib-watch": "0.6.1",
     "grunt-open": "0.2.3",
-    "grunt-contrib-sass": "0.7.4",
+    "grunt-contrib-sass": "0.8.1",
     "grunt-contrib-cssmin": "0.10.0",
     "grunt-contrib-requirejs": "0.4.4",
     "grunt-processhtml": "0.3.3",
