@@ -10,6 +10,8 @@ module.exports = (grunt) ->
           script: 'server/server.js'
 
     watch:
+      options:
+        livereload: true
       express:
         files: ['public/js/**/*.js', 'server/**/*.js']
         tasks: ['test', 'express:dev']
@@ -18,6 +20,8 @@ module.exports = (grunt) ->
       sass:
         files: ['public/**/*.scss']
         tasks: ['sass:dev']
+      templates:
+        files: ['public/**/*.mustache']
 
     open:
       dev:
