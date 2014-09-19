@@ -39,10 +39,10 @@ module.exports = (grunt) ->
     sass:
       dev:
         files:
-          'public/css/base.css': 'public/css/base.scss'
+          'public/style/base.css': 'public/style/base.scss'
       dist:
         files:
-          'dist/css/style.css': 'public/css/base.scss'
+          'dist/css/style.css': 'public/style/base.scss'
 
     cssmin:
       dist:
