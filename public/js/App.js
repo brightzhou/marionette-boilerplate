@@ -1,26 +1,27 @@
 define([
-        'backbone',
-        'AppRouter',
-        'views/welcome/WelcomeView'
-    ],
-    function (Backbone, AppRouter, WelcomeView) {
-        'use strict';
-        var MyApp = new Backbone.Marionette.Application();
+		'backbone',
+		'AppRouter',
+		'views/welcome/WelcomeView'
+	],
+	function (Backbone, AppRouter, WelcomeView) {
+		'use strict';
 
-        MyApp.addRegions({
-            mainRegion: 'body'
-        });
+		var MyApp = new Backbone.Marionette.Application();
 
-        MyApp.addInitializer(function () {
-            MyApp.appRouter = new AppRouter();
-            MyApp.mainRegion.show(new WelcomeView());
-        });
+		MyApp.addRegions({
+			mainRegion: '#body'
+		});
 
-        MyApp.on('initialize:after', function () {
-            if (Backbone.history) {
-                Backbone.history.start();
-            }
-        });
+		MyApp.addInitializer(function () {
+			MyApp.appRouter = new AppRouter();
+			MyApp.mainRegion.show(new WelcomeView());
+		});
 
-        return MyApp;
-    });
+		MyApp.on('initialize:after', function () {
+			if (Backbone.history) {
+				Backbone.history.start();
+			}
+		});
+
+		return MyApp;
+	});

@@ -4,5 +4,9 @@
 @import "base/base";
 @import "normalize";
 
+#body {
+	@include outer-container;
+}
+
 //pages
 @import '../js/views/welcome/welcome';
