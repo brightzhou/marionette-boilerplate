@@ -12,6 +12,10 @@ var logger = new (winston.Logger)({
 
 app.use(express.static(__dirname + '/../public'));
 
+app.get('/info', function (req, res) {
+	res.json({hello: "world"});
+});
+
 app.listen(3000, function () {
 	logger.info('App running on port 3000 o//');
 });
