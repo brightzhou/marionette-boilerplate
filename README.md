@@ -16,7 +16,10 @@
 
 ### Make it works :
 
-npm install
-and then bower install
-and then install sass/bourdon/neat
-and then it's ok :)
+npm install && bower install
+
+### Tasks :
+
++ grunt serve
++ grunt test
++ grunt dist
