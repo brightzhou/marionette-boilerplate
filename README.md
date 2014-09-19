@@ -5,10 +5,10 @@
 ### What i use :
 
 + backbone 1.1.2
-+ marionette 2.1.0
++ marionette 2.2.1
 + underscore 1.7.0
 + jQuery 2.1.1
-+ requirejs 2.1.14
++ requirejs 2.1.15
 + with text plugin 2.0.12
 + mustache 0.8.2
 + hogan 3.0.2
