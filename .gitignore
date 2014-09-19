@@ -7,3 +7,4 @@ public/js/libs/
 Gruntfile.js
 dist/
 .sass-cache
+*.map
