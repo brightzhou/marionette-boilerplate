@@ -13,9 +13,9 @@
   },
   "devDependencies": {
     "mocha": "1.21.4",
-    "chai": "1.9.1",
+    "chai": "1.9.2",
     "sinonjs": "1.10.2",
-    "sinon-chai": "2.5.0",
+    "sinon-chai": "2.6.0",
     "chai-jquery": "1.2.2"
   },
   "resolutions": {
