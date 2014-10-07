@@ -19,9 +19,6 @@ require.config({
 		},
 		hogan: {
 			exports: 'Hogan'
-		},
-		App: {
-			deps: ['marionette']
 		}
 	}
 });
