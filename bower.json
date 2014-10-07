@@ -1,15 +1,14 @@
 {
   "name": "Marionette-Boilerplate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "jquery": "2.1.1",
     "backbone": "1.1.2",
     "marionette": "2.2.1",
-    "underscore": "1.7.0",
+    "lodash": "2.4.1",
     "requirejs-text": "2.0.12",
     "hogan": "3.0.2",
-    "requirejs": "2.1.15",
-    "mustache": "0.8.2"
+    "requirejs": "2.1.15"
   },
   "devDependencies": {
     "mocha": "1.21.4",

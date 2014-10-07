@@ -1,27 +1,30 @@
+/*jshint -W031 */
 define([
 		'backbone',
-		'AppRouter',
-		'views/welcome/WelcomeView'
+		'Router',
+		'hogan'
 	],
-	function (Backbone, AppRouter, WelcomeView) {
+	function (Backbone, Router, Hogan) {
 		'use strict';
 
-		var MyApp = new Backbone.Marionette.Application();
+		var App = new Backbone.Marionette.Application({
 
-		MyApp.addRegions({
-			mainRegion: '#body'
-		});
-
-		MyApp.addInitializer(function () {
-			MyApp.appRouter = new AppRouter();
-			MyApp.mainRegion.show(new WelcomeView());
-		});
-
-		MyApp.on('initialize:after', function () {
-			if (Backbone.history) {
-				Backbone.history.start();
+			initialize: function () {
+				new Router();
 			}
+
 		});
 
-		return MyApp;
+		App.on('before:start', function () {
+			Backbone.Marionette.Renderer.render = function (template, data) {
+				return Hogan.compile(template).render(data);
+			};
+
+		});
+
+		App.on('start', function () {
+			Backbone.history.start();
+		});
+
+		return App;
 	});
