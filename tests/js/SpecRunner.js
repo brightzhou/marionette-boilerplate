@@ -8,7 +8,9 @@ require.config({
 		hogan: 'libs/hogan/web/1.0.0/hogan',
 		text: 'libs/requirejs-text/text',
 		chai: 'libs/chai/chai',
-		'chai-jquery': 'libs/chai-jquery/chai-jquery'
+		'chai-jquery': 'libs/chai-jquery/chai-jquery',
+		sinon: 'libs/sinonjs/sinon',
+		'sinon-chai': 'libs/sinon-chai/lib/sinon-chai'
 	},
 	deps: ['text'],
 	shim: {
@@ -27,15 +29,19 @@ require.config({
 		},
 		'chai-jquery': {
 			deps: ['chai']
+		},
+		'sinon-chai': {
+			deps: ['sinon']
 		}
 	}
 });
 
-require(['require', 'marionette', 'hogan', 'chai', 'chai-jquery'],
-	function (require, Marionette, Hogan, chai, chaiJquery) {
+require(['require', 'marionette', 'hogan', 'chai', 'chai-jquery', 'sinon', 'sinon-chai'],
+	function (require, Marionette, Hogan, chai, chaiJquery, sinon, sinonChai) {
 
 		chai.should();
 		chai.use(chaiJquery);
+		chai.use(sinonChai);
 
 		Marionette.Renderer.render = function (template, data) {
 			return Hogan.compile(template).render(data);
