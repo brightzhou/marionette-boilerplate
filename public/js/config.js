@@ -3,7 +3,7 @@ require.config({
 	baseUrl: 'js',
 	paths: {
 		jquery: 'libs/jquery/dist/jquery',
-		underscore: 'libs/lodash/dist/lodash',
+		underscore: 'libs/lodash/lodash',
 		backbone: 'libs/backbone/backbone',
 		marionette: 'libs/marionette/lib/backbone.marionette',
 		hogan: 'libs/hogan/web/1.0.0/hogan',
