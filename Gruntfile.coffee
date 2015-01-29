@@ -59,7 +59,7 @@ module.exports = (grunt) ->
           mainConfigFile: 'public/js/config.js'
           out: 'dist/js/script.js'
           preserveLicenseComments: false
-          optimize: 'uglify2'
+          optimize: 'uglify'
           paths:
             requireLib: 'libs/requirejs/require'
           include: 'requireLib'

@@ -1,11 +1,11 @@
 define([
-		'backbone',
+		'marionette',
 		'RegionManager'
 	],
-	function (Backbone, regionManager) {
+	function (Marionette, regionManager) {
 		'use strict';
 
-		return Backbone.Marionette.Controller.extend({
+		return Marionette.Controller.extend({
 
 			index: function () {
 				regionManager.showIndex();

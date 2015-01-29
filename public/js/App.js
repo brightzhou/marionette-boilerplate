@@ -1,13 +1,14 @@
 /*jshint -W031 */
 define([
+		'marionette',
 		'backbone',
 		'Router',
 		'hogan'
 	],
-	function (Backbone, Router, Hogan) {
+	function (Marionette, Backbone, Router, Hogan) {
 		'use strict';
 
-		var App = new Backbone.Marionette.Application({
+		var App = new Marionette.Application({
 
 			initialize: function () {
 				new Router();
@@ -16,7 +17,7 @@ define([
 		});
 
 		App.on('before:start', function () {
-			Backbone.Marionette.Renderer.render = function (template, data) {
+			Marionette.Renderer.render = function (template, data) {
 				return Hogan.compile(template).render(data);
 			};
 

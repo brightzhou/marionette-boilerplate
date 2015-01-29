@@ -1,10 +1,10 @@
 define([
-		'backbone',
+		'marionette',
 		'Controller'
 	],
-	function (Backbone, Controller) {
+	function (Marionette, Controller) {
 		'use strict';
-		return Backbone.Marionette.AppRouter.extend({
+		return Marionette.AppRouter.extend({
 
 			controller: new Controller(),
 

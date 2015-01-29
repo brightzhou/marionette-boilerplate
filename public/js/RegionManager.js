@@ -1,11 +1,11 @@
 define([
-		'backbone',
+		'marionette',
 		'views/welcome/WelcomeView'
 	],
-	function (Backbone, WelcomeView) {
+	function (Marionette, WelcomeView) {
 		'use strict';
 
-		var rm = new Backbone.Marionette.RegionManager();
+		var rm = new Marionette.RegionManager();
 
 		var regions = rm.addRegions({
 			body: '#body'

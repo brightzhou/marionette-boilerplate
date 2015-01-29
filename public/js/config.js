@@ -9,7 +9,7 @@ require.config({
 		hogan: 'libs/hogan/web/builds/3.0.2/hogan-3.0.2',
 		text: 'libs/requirejs-text/text'
 	},
-	deps: ['text', 'marionette'],
+	deps: ['text'],
 	shim: {
 		backbone: {
 			deps: ['jquery', 'underscore']
@@ -19,9 +19,6 @@ require.config({
 		},
 		hogan: {
 			exports: 'Hogan'
-		},
-		App: {
-			deps: ['marionette']
 		}
 	}
 });
@@ -33,11 +30,8 @@ requirejs.onError = function (err) {
 	console.log(err.requireModules);
 };
 
-requirejs([
-		'App'
-	],
-	function (App) {
-		'use strict';
+requirejs(['App'], function (App) {
+	'use strict';
 
-		App.start();
-	});
+	App.start();
+});
