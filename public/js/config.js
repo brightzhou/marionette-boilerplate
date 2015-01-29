@@ -6,7 +6,7 @@ require.config({
 		underscore: 'libs/lodash/lodash',
 		backbone: 'libs/backbone/backbone',
 		marionette: 'libs/marionette/lib/backbone.marionette',
-		hogan: 'libs/hogan/web/1.0.0/hogan',
+		hogan: 'libs/hogan/web/builds/3.0.2/hogan-3.0.2',
 		text: 'libs/requirejs-text/text'
 	},
 	deps: ['text', 'marionette'],
@@ -19,6 +19,9 @@ require.config({
 		},
 		hogan: {
 			exports: 'Hogan'
+		},
+		App: {
+			deps: ['marionette']
 		}
 	}
 });
