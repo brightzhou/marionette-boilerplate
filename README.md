@@ -5,11 +5,11 @@
 ### What i use :
 
 + backbone 1.1.2
-+ marionette 2.3.0
-+ lodash 2.4.1
++ marionette 2.3.1
++ lodash 3.0.0
 + jQuery 2.1.3
 + requirejs 2.1.15
-+ with text plugin 2.0.12
++ with text plugin 2.0.13
 + hogan 3.0.2
 
 ### Make it works :
